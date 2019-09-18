@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Icon from '../icon/index';
+import NavLink from './navlink';
 
 export default class Sidebar extends React.Component {
   render() {
@@ -21,19 +21,9 @@ export default class Sidebar extends React.Component {
 
         <div className="sidebar-heading">オブジェクトエディタ</div>
 
-        <li className="nav-item">
-          <a className="nav-link" href="charts.html">
-            <Icon icon="users" />
-            <span>ユーザ</span>
-          </a>
-        </li>
+        <NavLink icon="users" to="/object/user"><span>ユーザ</span></NavLink>
 
-        <li className="nav-item">
-          <a className="nav-link" href="tables.html">
-            <Icon icon="calendar-alt" />
-            <span>シフト</span>
-          </a>
-        </li>
+        <NavLink icon="calendar-alt" to="/object/shift"><span>シフト</span></NavLink>
       </ul>
     );
   }
